@@ -1,0 +1,30 @@
+
+div.container {
+    max-width: 600px;
+    height: 290px;
+    margin-top: calc(40vh - 130px);
+}
+
+div.container form div.hidden {
+    display: none;
+}
+
+div.container h2 {
+    text-align: center;
+    color: #001f7d;
+}
+
+
+div.container button.btn-primary {
+    width: 20%;
+    float: right;
+    margin-top: 20px;
+}
+
+div.container span.input-group-text {
+    cursor: pointer;
+}
+
+div.container button.btn-primary:hover {
+    transform: scale(0.98);
+}
