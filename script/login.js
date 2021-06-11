@@ -1,29 +1,30 @@
 const InputPasswordElement = document.getElementById('password')
 const InputEmailElement    = document.getElementById('email')
+const alertDivElement = document.getElementById('alert')
+const IconInputPassword = document.getElementById('i')
 
 
 function view_alert() {
-    document.getElementById('alert').classList.remove('hidden')
+    alertDivElement.classList.remove('hidden')
 
     setTimeout(
-        () => document.getElementById('alert').classList.add('hidden'),
+        () => alertDivElement.classList.add('hidden'),
         3000
     )
+
 }
 
 
 function form_validate() {
-
     if (InputPasswordElement.value != '' && InputEmailElement.value != '')
         return true
+    
 
     view_alert()
     return false
 }
 
 
-
-const IconInputPassword = document.getElementById('i')
 let activate = false
 
 document.getElementById('icon')
