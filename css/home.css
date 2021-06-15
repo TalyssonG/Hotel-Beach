@@ -18,6 +18,15 @@ body {
     position: relative
 }
 
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    
+    grid-template-columns: 250px auto;
+    grid-template-rows: 100%;
+}
 
 
 .wrapper .sidebar {
@@ -36,6 +45,10 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Krona One', sans-serif;
+}
+
+div.content {
+    padding: 20px;
 }
 
 .wrapper .sidebar ul li {
@@ -105,85 +118,3 @@ body {
 .wrapper .main_content .info div {
     margin-bottom: 20px
 }
-
-/* code sidebar  */
-
-.wrapper .sidebar li.current-tab {
-    background: #d1d5db;
-    position: relative;
-
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
-.wrapper .sidebar li.current-tab:hover {
-    background: #d1d5db;
-}
-
-.wrapper .sidebar li.current-tab::before {
-    content: "";
-    display: block;
-
-    width: 20px;
-    height: 20px;
-
-    position: absolute;
-    right: 0;
-    top: -21px;
-
-    z-index: 2;
-
-    border-bottom-right-radius: 50%;
-
-    background: #001f7d;
-}
-
-.wrapper .sidebar li.current-tab span.t {
-    content: "";
-    display: block;
-
-    width: 20px;
-    height: 20px;
-
-    position: absolute;
-    right: 0;
-    top: -21px;
-
-    background: #d1d5db;
-}
-
-.wrapper .sidebar li.current-tab::after {
-    content: "";
-    display: block;
-
-    width: 20px;
-    height: 20px;
-
-    position: absolute;
-    right: 0;
-    bottom: -21px;
-
-    border-top-right-radius: 50%;
-
-    background: #001f7d;
-}
-
-.wrapper .sidebar li.current-tab span.b {
-    content: "";
-    display: block;
-
-    width: 20px;
-    height: 20px;
-
-    position: absolute;
-    right: 0;
-    bottom: -21px;
-
-    background: #d1d5db;
-}
-
-.wrapper .sidebar li.current-tab a {
-    color: #000;
-}
-
-/* end */
