@@ -14,7 +14,7 @@ $endereco = $_POST['endereco'];
 
 
 //$date = date('Y-m-d H:i:s');
-$result = "INSERT INTO Hospede(nome, email, senha, cpf, rg, telefone, endereco, horario) VALUES ('$nome', '$email', '$senha', '$CPF', '$RG', '$telefone', '$endereco', NOW())";
+$result = "INSERT INTO Hospede(nome, email, senha, cpf, rg, telefone, endereco) VALUES ('$nome', '$email', '$senha', '$CPF', '$RG', '$telefone', '$endereco')";
 
 $resultado_usuario = mysqli_query($conn, $result) or die('erro ao cadastrar hóspede!');
 

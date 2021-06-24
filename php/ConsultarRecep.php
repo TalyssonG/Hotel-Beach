@@ -14,14 +14,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <title>Hotel Beach - Consultar gerente</title>
+  <title>Hotel Beach - Consultar Recepcionista</title>
 </head>
 
 <body>
   <div class="grid-container">
     <div class="wrapper">
       <div class="sidebar">
-        <h2>Consultar Gerente</h2>
+        <h2>Consultar Recepcionis.</h2>
         <ul>
           <li><a href="../index.html">Página inicial</a></li>
           
@@ -32,14 +32,13 @@
           <li><a href="../cadastrar/cadastrarHospede.html">Cadastrar hóspede</a></li>
           
           <li><a href="../cadastrar/cadastrarQuarto.html">Cadastrar quarto</a></li>
-
-          <li><a href="ConsultarRecep.php">Consultar recepcionista</a></li>
+       
+          <li><a href="ConsultarGerente.php">Consultar gerente</a></li>
           
-
           <li><a href="ConsultarHospede.php">Consultar hóspede</a></li>
           
-<li><a href="ConsultarQuarto.php">Consultar quarto</a></li>
-
+          <li><a href="ConsultarQuarto.php">Consultar quarto</a></li>
+          
         </ul>
         <div class="social_media"> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i
               class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> </div>
@@ -48,22 +47,23 @@
 
     <div class="content">
 
-      <h2>Consultar gerente:</h2>
+      <h2>Consultar recepcionista:</h2>
 
       <form action="#" method="GET">
         <div class="mb-3">
-         
+
           <div class="input-group mb-3">
-              <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome do gerente">
+              <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome do recepcionista">
               <button type="submit" class="input-group-text" id="icon"><i class="fa fa-search" aria-hidden="true"></i></button>
-         </div>
+          </div>
         </div>
       </form>
 
       <?php
-        include_once("ListarGerente.php"); ?>
+          include_once("ListarRecep.php"); ?>
     </div>
   </div>
+
 
   <!-- Popper and Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

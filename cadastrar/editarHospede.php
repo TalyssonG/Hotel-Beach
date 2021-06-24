@@ -24,18 +24,21 @@
       <h2>Cadastrar Hóspede</h2>
       <ul>
         <li><a href="cadastrarGerente.html">Cadastrar gerente</a></li>
-        <li><a href="cadastrarHospede.html">Cadastrar hóspede</a></li>
-
-        <li>
-          <a href="cadastrarRecep.html">Cadastrar recepcionista</a>
+        
+        <li><a href="cadastrarRecep.html">Cadastrar recepcionista</a>
         </li>
+        
+        <li><a href="cadastrarHospede.html">Cadastrar hóspede</a></li>
 
         <li><a href="cadastrarQuarto.html">Cadastrar quarto</a></li>
 
         <li><a href="../php/ConsultarGerente.php">Consultar gerente</a></li>
 
-        <li><a href="../php/ConsultarQuarto.php">Consultar quarto</a></li>
+        <li><a href="../php/ConsultarRecep.php">Consultar recepcionista</a></li>
+
         <li><a href="../php/ConsultarHospede.php">Consultar hóspede</a></li>
+
+        <li><a href="../php/ConsultarQuarto.php">Consultar quarto</a></li>
 
         <li><a href="../Sair.php">Sair</a></li>
       </ul>

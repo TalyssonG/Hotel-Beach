@@ -22,7 +22,8 @@ include_once("../conexao.php");?>
       $res = " WHERE nome LIKE '%$nome%'";
     }
 
-		$result_usuarios = "SELECT * FROM Hospede $res ORDER BY id_hospede";
+		$result_usuarios = "SELECT * FROM Recepcionista $res ORDER BY id_recepcionista";
+		
 		$resultado_usuarios = mysqli_query($conn, $result_usuarios); ?>
 		
  <table  class="table">
@@ -44,7 +45,7 @@ include_once("../conexao.php");?>
     
 
   <tr>
-  <td><?php echo $row_usuario['id_hospede'] ?></td>
+  <td><?php echo $row_usuario['id_recepcionista'] ?></td>
   <td><?php echo $row_usuario['nome'] ?></td>
    <td><?php echo $row_usuario['email'] ?></td>
   <td><?php echo $row_usuario['cpf'] ?></td>
@@ -52,9 +53,10 @@ include_once("../conexao.php");?>
   <td><?php echo $row_usuario['endereco'] ?></td>
   <td><?php echo $row_usuario['telefone'] ?></td>
   <td>
-  <a href="../cadastrar/editarHospede.php?id_hospede=<?= $row_usuario['id_hospede'] ?>" class="btn btn-warning">Editar </a>
+      
+  <a href="../cadastrar/editarRecep.php?id_recepcionista=<?= $row_usuario['id_recepcionista'] ?>" class="btn btn-warning">Editar </a>
   
- <a href= "javascript: if(confirm('Deseja mesmo excluir o registro do hóspede?')) location.href='ExcluirHospede.php?p=Excluir&usuario=<?php echo $row_usuario['id_hospede'];?>'" class="btn btn-danger">Excluir</a></td>
+ <a href= "javascript: if(confirm('Deseja mesmo excluir o registro do recepcionista?')) location.href='ExcluirRecep.php?p=Excluir&usuario=<?php echo $row_usuario['id_recepcionista'];?>'" class="btn btn-danger">Excluir</a></td>
   </tr>
      
      <?php }

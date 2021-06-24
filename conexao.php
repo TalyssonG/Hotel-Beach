@@ -3,7 +3,7 @@
 
 $servidor = "localhost";
 $usuario = "root";
-$senha = "";
+$senha = "root";
 $dbname = "Hotel";
 
 //Criar a conexao

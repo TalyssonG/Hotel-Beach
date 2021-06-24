@@ -13,9 +13,17 @@ include_once("../conexao.php");?>
 	</head>
 	<body>
 		
-		<?php
+    <?php
+    
+    $res = " ";
 
-		$result_usuarios = "SELECT * FROM Quarto ORDER BY id_quarto";
+    if (!empty($_GET['num']) && isset($_GET['num']))
+    {
+      $num = $_GET['num'];
+      $res = " WHERE numero_porta = $num ";
+    }
+
+    $result_usuarios = "SELECT * FROM Quarto $res ORDER BY id_quarto";
 		$resultado_usuarios = mysqli_query($conn, $result_usuarios); ?>
 		
  <table  class="table">

@@ -14,7 +14,15 @@ include_once("../conexao.php");?>
 		
 		<?php
 
-		$result_usuarios = "SELECT * FROM Gerente";
+    $res = "";
+
+    if (isset($_GET['nome']) )
+    {
+      $nome = $_GET['nome'];
+      $res = " WHERE nome LIKE '%$nome%'";
+    }
+
+		$result_usuarios = "SELECT * FROM Gerente" . $res;
 		$resultado_usuarios = mysqli_query($conn, $result_usuarios); ?>
 		
  <table  class="table">

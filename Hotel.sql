@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 21-Jun-2021 às 23:45
+-- Tempo de geração: 24-Jun-2021 às 18:08
 -- Versão do servidor: 5.6.38
 -- versão do PHP: 7.4.3
 
@@ -65,6 +65,13 @@ CREATE TABLE `Gerente` (
   `telefone` varchar(16) NOT NULL,
   `endereco` varchar(45) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `Gerente`
+--
+
+INSERT INTO `Gerente` (`id_gerente`, `nome`, `email`, `senha`, `cpf`, `telefone`, `endereco`) VALUES
+(11, 'Talysson', 'Talysson@1', '1234', '1234', '1234', 'Rua do Talysson');
 
 -- --------------------------------------------------------
 
@@ -179,25 +186,25 @@ ALTER TABLE `Checkin`
 -- AUTO_INCREMENT de tabela `Gerente`
 --
 ALTER TABLE `Gerente`
-  MODIFY `id_gerente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_gerente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `Hospede`
 --
 ALTER TABLE `Hospede`
-  MODIFY `id_hospede` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_hospede` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `Quarto`
 --
 ALTER TABLE `Quarto`
-  MODIFY `id_quarto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_quarto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `Recepcionista`
 --
 ALTER TABLE `Recepcionista`
-  MODIFY `id_recepcionista` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_recepcionista` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

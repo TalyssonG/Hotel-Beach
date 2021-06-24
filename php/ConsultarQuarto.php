@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <title>Hotel Beach - Consolutar quartos</title>
+  <title>Hotel Beach - Consultar quarto</title>
 </head>
 
 <body>
@@ -25,14 +25,21 @@
         <h2>Consultar Quarto</h2>
         <ul>
           <li><a href="../index.html">Página inicial</a></li>
+          
           <li><a href="../cadastrar/cadastrarGerente.html">Cadastrar gerente</a></li>
-          <li><a href="../cadastrar/cadastrarHospede.html">Cadastrar hóspede</a></li>
+          
           <li><a href="../cadastrar/cadastrarRecep.html">Cadastrar recepcionista</a></li>
+          
+          <li><a href="../cadastrar/cadastrarHospede.html">Cadastrar hóspede</a></li>
+          
           <li><a href="../cadastrar/cadastrarQuarto.html">Cadastrar quarto</a></li>
 
           <li><a href="ConsultarGerente.php">Consultar gerente</a></li>
+          
+          <li><a href="ConsultarRecep.php">Consultar recepcionista</a></li>
 
           <li><a href="ConsultarHospede.php">Consultar hóspede</a></li>
+          
         </ul>
         <div class="social_media"> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i
               class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> </div>
@@ -43,20 +50,19 @@
 
       <h2>Consultar quarto:</h2>
 
-      <form action="#">
+      <form action="ConsultarQuarto.php" method="GET">
         <div class="mb-3">
 
           <div class="input-group mb-3">
-              <input type="text" class="form-control" id="nome" placeholder="Número do quarto">
-              <span class="input-group-text" id="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-              
-         <?php
-          session_start();
-          include_once("ListarQuarto.php"); ?>
+              <input type="text" name="num" class="form-control" id="nome" placeholder="Número do quarto">
+              <button type="submit" class="input-group-text" id="icon"><i class="fa fa-search" aria-hidden="true"></i></button>
        
           </div>
         </div>
       </form>
+
+      <?php
+          include_once("ListarQuarto.php"); ?>
     </div>
   </div>
 

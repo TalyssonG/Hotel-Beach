@@ -20,13 +20,13 @@ $email = preg_replace('/[^[:alnum:@]_]/', '', $_POST['email']);
 $senha = preg_replace('/[^[:alnum:@]_]/', '', $_POST['password']);
 
 
-$sql = "SELECT id_gerente, nome, login FROM Gerente WHERE email = '$email' AND senha = '$senha'";
+$sql = "SELECT id_gerente, nome FROM Gerente WHERE email = '$email' AND senha = '$senha'";
 
 $result = mysqli_query($conn, $sql);
 
 if (empty($result)) {
-    header('Lacation: login.html?msg=usuario não cadastrado');
-    die();
+    header('Lacation: login.html');
+    die('Usuario nao cadastrado');
 }
 
 $_SESSION['usuario'] = $result->fetch_array();

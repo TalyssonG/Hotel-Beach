@@ -27,15 +27,18 @@
           
           <li><a href="../cadastrar/cadastrarGerente.html">Cadastrar gerente</a></li>
           
-          <li><a href="../cadastrar/cadastrarHospede.html">Cadastrar hóspede</a></li>
-          
           <li><a href="../cadastrar/cadastrarRecep.html">Cadastrar recepcionista</a></li>
+          
+          <li><a href="../cadastrar/cadastrarHospede.html">Cadastrar hóspede</a></li>
           
           <li><a href="../cadastrar/cadastrarQuarto.html">Cadastrar quarto</a></li>
        
           <li><a href="ConsultarGerente.php">Consultar gerente</a></li>
           
+          <li><a href="ConsultarRecep.php">Consultar recepcionista</a></li>
+          
           <li><a href="ConsultarQuarto.php">Consultar quarto</a></li>
+          
         </ul>
         <div class="social_media"> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i
               class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> </div>
@@ -46,20 +49,18 @@
 
       <h2>Consultar hóspede:</h2>
 
-      <form action="#">
+      <form action="#" method="GET">
         <div class="mb-3">
 
           <div class="input-group mb-3">
-              <input type="text" class="form-control" id="nome" placeholder="Nome do hospede">
-              <span class="input-group-text" id="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-              
-      <?php
-          session_start();
-          include_once("ListarHospede.php"); ?>
-              
+              <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome do hospede">
+              <button type="submit" class="input-group-text" id="icon"><i class="fa fa-search" aria-hidden="true"></i></button>
           </div>
         </div>
       </form>
+
+      <?php
+          include_once("ListarHospede.php"); ?>
     </div>
   </div>
 
