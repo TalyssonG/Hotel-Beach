@@ -9,25 +9,33 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="../css/home.css">
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <title>Hotel Beach - Consolutar quartos</title>
+  <title>Hotel Beach - Consultar Hóspede</title>
 </head>
 
 <body>
   <div class="grid-container">
     <div class="wrapper">
       <div class="sidebar">
-        <h2>Consultar Hospede</h2>
+        <h2>Consultar Hóspede</h2>
         <ul>
-          <li><a href="index.html">Página inicial</a></li>
-          <li><a href="cadastrarGerente.html">Cadastrar gerente</a></li>
-          <li><a href="cadastrarHospede">Cadastrar hóspede</a></li>
-          <li><a href="#">Cadastrar recepcionista</a></li>
-          <li><a href="#">Cadastrar quarto</a></li>
+          <li><a href="../index.html">Página inicial</a></li>
+          
+          <li><a href="../cadastrar/cadastrarGerente.html">Cadastrar gerente</a></li>
+          
+          <li><a href="../cadastrar/cadastrarHospede.html">Cadastrar hóspede</a></li>
+          
+          <li><a href="../cadastrar/cadastrarRecep.html">Cadastrar recepcionista</a></li>
+          
+          <li><a href="../cadastrar/cadastrarQuarto.html">Cadastrar quarto</a></li>
+       
+          <li><a href="ConsultarGerente.php">Consultar gerente</a></li>
+          
+          <li><a href="ConsultarQuarto.php">Consultar quarto</a></li>
         </ul>
         <div class="social_media"> <a href="#"><i class="fa fa-facebook-f"></i></a> <a href="#"><i
               class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> </div>
@@ -36,59 +44,23 @@
 
     <div class="content">
 
-      <h2>Consolutar quarto:</h2>
+      <h2>Consultar hóspede:</h2>
 
       <form action="#">
         <div class="mb-3">
-          <label for="nome" class="form-label">Nome</label>
 
           <div class="input-group mb-3">
-              <input type="password" class="form-control" id="nome" placeholder="nome do hospede">
+              <input type="text" class="form-control" id="nome" placeholder="Nome do hospede">
               <span class="input-group-text" id="icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+              
+      <?php
+          session_start();
+          include_once("ListarHospede.php"); ?>
+              
           </div>
         </div>
       </form>
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Endereço</th>
-            <th>Telefone</th>
-          </tr>
-        </thead>
-        
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-
-            <td>
-              <a href="#" class="btn btn-danger">Deletar</a>
-              <a href="#" class="btn btn-warning">Editar</a>
-            </td>
-          </tr>
-          
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            
-            <td>
-              <a href="#" class="btn btn-danger">Deletar</a>
-              <a href="#" class="btn btn-warning">Editar</a>
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
     </div>
-
   </div>
 
 
